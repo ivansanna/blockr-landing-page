@@ -14,14 +14,10 @@
       background: #050726; 
       text-align: center; 
     }
-    header { padding: 60px 20px; }
+    header { padding: 80px 20px; }
     header h1 { font-size: 2.5em; margin-bottom: 20px; }
-    header p { font-size: 1.2em; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    form { max-width: 500px; margin: auto; text-align: left; }
-    label { display: block; margin-bottom: 5px; font-weight: bold; }
-    input, textarea { width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 6px; border: none; font-family: 'Hanken Grotesk', sans-serif; font-size: 1em; }
-    textarea { resize: vertical; height: 120px; }
-    .btn { background: #084FFF; color: #FFFFFF; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; }
+    header p { font-size: 1.2em; max-width: 600px; margin-left: auto; margin-right: auto; }
+    a.email { color: #084FFF; text-decoration: none; font-weight: bold; }
     footer { text-align: center; padding: 40px 20px; background: #101340; color: #FFFFFF; }
     footer a { color: #AAAAAA; margin: 0 10px; text-decoration: none; }
   </style>
@@ -29,26 +25,14 @@
 <body>
   <header>
     <h1>Support</h1>
-    <p>For faster support, send any questions and requests directly to <a href="mailto:hello@gmail.com" style="color:#084FFF;">hello@gmail.com</a>.</p>
+    <p>For faster support, send any questions or requests directly to <a href="mailto:ivansanna018@gmail.com" class="email">ivansanna018@gmail.com</a>.</p>
   </header>
-
-  <form action="mailto:hello@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="Name" required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="Email" required>
-
-    <label for="message">Message</label>
-    <textarea id="message" name="Message" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-  </form>
 
   <footer>
     <p>
       <a href="privacy.html" target="_blank">Privacy Policy</a> • 
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a> •
+      <a href="support.html">Support</a>
     </p>
   </footer>
 </body>
