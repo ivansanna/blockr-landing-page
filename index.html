@@ -14,31 +14,44 @@
       background: #050726; 
       text-align: center; 
     }
-    header { padding: 80px 20px; }
-    header h1 { font-size: 3em; margin-bottom: 20px; }
-    header p { font-size: 1.2em; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .app-store-btn { display: inline-block; }
+    header { padding: 60px 20px; }
+    header img.logo { width: 80px; margin-bottom: 20px; }
+    header h1 { font-size: 2em; margin-bottom: 10px; }
+    header p { font-size: 1.1em; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; color: #CCCCCC; }
+    .screenshots { display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+    .screenshots img { max-width: 200px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .app-store-btn img { height: 60px; }
     footer { text-align: center; padding: 40px 20px; background: #101340; color: #FFFFFF; }
     footer a { color: #AAAAAA; margin: 0 10px; text-decoration: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>BLOCKR</h1>
-    <p>Quit Phone Addiction. Take control of your screen time with BLOCKR, the simplest iOS app blocker.</p>
-    
-    <!-- Apple App Store Button -->
+    <!-- Logo -->
+    <img src="images/app-logo.png" alt="BLOCKR Logo" class="logo">
+
+    <!-- Hero Text -->
+    <h1>Trapped in Endless Scrolling?</h1>
+    <p>We solved that. Download BLOCKR and own your day.</p>
+
+    <!-- Screenshots -->
+    <div class="screenshots">
+      <img src="images/screenshot-1.png" alt="BLOCKR App Screenshot 1">
+      <img src="images/screenshot-2.png" alt="BLOCKR App Screenshot 2">
+    </div>
+
+    <!-- Download Button -->
     <a href="#" class="app-store-btn">
-      <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" alt="Download on the App Store" style="height:60px;">
+      <img src="images/download-cta.png" alt="Download on the App Store">
     </a>
   </header>
 
-<footer>
-  <p>
-    <a href="privacy.html" target="_blank">Privacy Policy</a> • 
-    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a> •
-    <a href="support.html">Support</a>
-  </p>
-</footer>
+  <footer>
+    <p>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a> • 
+      <a href="privacy.html" target="_blank">Privacy Policy</a> • 
+      <a href="support.html">Support</a>
+    </p>
+  </footer>
 </body>
 </html>
