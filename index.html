@@ -85,7 +85,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Feature Section Styles - Exact Apple Layout */
+    /* Feature Section Styles */
     .feature-section {
       background: #000000;
       position: relative;
@@ -172,7 +172,7 @@
       color: #86868b;
     }
 
-    /* Two Column Layout - Apple Style */
+    /* Two Column Layout */
     .two-column-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -255,12 +255,15 @@
       height: 54px;
     }
 
-    /* Apple's Grid System for Benefits */
+    /* Benefits Grid */
     .benefits-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
       margin: 80px 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .benefit-item {
@@ -268,15 +271,9 @@
     }
 
     .benefit-icon {
-      width: 64px;
-      height: 64px;
-      margin-bottom: 24px;
       font-size: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 16px;
+      margin-bottom: 24px;
+      display: block;
     }
 
     .benefit-title {
@@ -292,32 +289,6 @@
       line-height: 1.47059;
       font-weight: 400;
       letter-spacing: -.022em;
-      color: #86868b;
-    }
-
-    /* Large Quote Style Section */
-    .quote-section {
-      text-align: center;
-      padding: 140px 40px;
-      background: #161617;
-    }
-
-    .quote-text {
-      font-size: 40px;
-      line-height: 1.1;
-      font-weight: 600;
-      letter-spacing: 0em;
-      margin-bottom: 32px;
-      max-width: 693px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .quote-attribution {
-      font-size: 19px;
-      line-height: 1.21053;
-      font-weight: 400;
-      letter-spacing: .012em;
       color: #86868b;
     }
 
@@ -365,7 +336,7 @@
       letter-spacing: -.01em;
     }
 
-    /* Responsive Breakpoints - Apple's exact system */
+    /* Responsive Breakpoints */
     @media only screen and (max-width: 1068px) {
       .hero-title { font-size: 48px; }
       .headline-1 { font-size: 64px; }
@@ -422,11 +393,9 @@
         flex-direction: column;
         gap: 16px;
       }
-
-      .quote-text { font-size: 28px; }
     }
 
-    /* Intersection Observer Animation Classes */
+    /* Animation Classes */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -446,10 +415,6 @@
 
     .stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
     .stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
-    .stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
-    .stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
-    .stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
-    .stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
 
     .stagger-children.visible > * {
       opacity: 1;
@@ -462,8 +427,8 @@
   <section class="feature-section">
     <div class="full-width-hero">
       <img src="images/app-logo.png" alt="BLOCKR" class="hero-logo">
-      <h1 class="hero-title">Better focus ahead.</h1>
-      <p class="hero-subtitle">Break free from endless scrolling.</p>
+      <h1 class="hero-title">Own your day.</h1>
+      <p class="hero-subtitle">Break free from phone addiction. Build the focus you've been looking for.</p>
       
       <div class="device-hero">
         <div class="device-container">
@@ -482,78 +447,30 @@
     </div>
   </section>
 
-  <!-- Protection Section -->
+  <!-- Reclaim Time Section -->
   <section class="feature-section light">
     <div class="section-container">
       <div class="two-column-section fade-in">
         <div class="column-visual">
-          <img src="images/screenshot-1.png" alt="Unbreakable Protection" class="single-device">
+          <img src="images/screenshot-1.png" alt="Reclaim Your Time" class="single-device">
         </div>
         <div class="column-text">
-          <h2 class="headline-3">Unbreakable protection.</h2>
-          <p class="subhead">No bypass. No exceptions.</p>
-          <p class="body-large">Advanced algorithms prevent you from disabling blocks during moments of weakness. BLOCKR uses behavioral psychology to help you build lasting, healthy habits with your device.</p>
+          <h2 class="headline-3">Reclaim your time.</h2>
+          <p class="subhead">Turn hours of scrolling into hours of living.</p>
+          <p class="body-large">The average person spends over 7 hours a day on their phone. BLOCKR helps you redirect that time toward what truly matters — your goals, relationships, and personal growth.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Focus Quote Section -->
-  <section class="quote-section fade-in">
-    <div class="quote-text">
-      "The most productive people aren't the busiest.<br>They're the most focused."
-    </div>
-  </section>
-
-  <!-- Smart Features Section -->
+  <!-- Features Section -->
   <section class="feature-section">
-    <div class="section-container">
-      <div class="two-column-section fade-in">
-        <div class="column-text">
-          <h2 class="headline-3">Smart scheduling that adapts to you.</h2>
-          <p class="subhead">Work when you work. Rest when you rest.</p>
-          <p class="body-large">Set custom schedules that automatically activate during work hours, study sessions, or family time. BLOCKR learns your patterns and suggests optimal blocking times to maximize your focus.</p>
-        </div>
-        <div class="column-visual">
-          <img src="images/screenshot-2.png" alt="Smart Scheduling" class="single-device">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Grid -->
-  <section class="feature-section light">
     <div class="section-container">
       <div class="full-width-hero compact">
         <h2 class="headline-2">Designed for real life.</h2>
-        <p class="subhead secondary-text">Every feature helps you build better habits.</p>
       </div>
       
       <div class="benefits-grid stagger-children fade-in">
-        <div class="benefit-item">
-          <div class="benefit-icon">⚡</div>
-          <h3 class="benefit-title">Instant Focus Mode</h3>
-          <p class="benefit-description">Block distracting apps with one tap. Perfect for deep work, study sessions, or quality time with family.</p>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">📊</div>
-          <h3 class="benefit-title">Progress Insights</h3>
-          <p class="benefit-description">Track your focus time and celebrate milestones. See how much time you're saving each day.</p>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">🧠</div>
-          <h3 class="benefit-title">Habit Interruption</h3>
-          <p class="benefit-description">Break mindless scrolling patterns with gentle reminders and reflection prompts.</p>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">🎯</div>
-          <h3 class="benefit-title">Flexible Blocking</h3>
-          <p class="benefit-description">Choose which apps to block and when. From social media to games, you're in complete control.</p>
-        </div>
-        
         <div class="benefit-item">
           <div class="benefit-icon">🔒</div>
           <h3 class="benefit-title">Privacy First</h3>
@@ -569,23 +486,7 @@
     </div>
   </section>
 
-  <!-- Transformation Section -->
-  <section class="feature-section">
-    <div class="section-container">
-      <div class="two-column-section fade-in">
-        <div class="column-visual">
-          <img src="images/screenshot-1.png" alt="Digital Wellness" class="single-device">
-        </div>
-        <div class="column-text">
-          <h2 class="headline-3">Reclaim your time.</h2>
-          <p class="subhead">Turn hours of scrolling into hours of living.</p>
-          <p class="body-large">The average person spends over 7 hours a day on their phone. BLOCKR helps you redirect that time toward what truly matters — your goals, relationships, and personal growth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final Hero Section -->
+  <!-- Final CTA Section -->
   <section class="feature-section light">
     <div class="full-width-hero fade-in">
       <span class="eyebrow">Coming Soon</span>
@@ -624,7 +525,7 @@
   </footer>
 
   <script>
-    // Intersection Observer for animations - Apple's smooth reveal style
+    // Intersection Observer for animations
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -100px 0px'
@@ -643,7 +544,7 @@
       observer.observe(el);
     });
 
-    // Device hover interactions - Apple style
+    // Device hover interactions
     document.querySelectorAll('.device-container').forEach((container, index) => {
       container.addEventListener('mouseenter', () => {
         const siblings = container.parentElement.querySelectorAll('.device-container');
@@ -675,13 +576,12 @@
     }
     
     function updateAnimations() {
-      // Performance-optimized scroll animations
       ticking = false;
     }
     
     window.addEventListener('scroll', requestTick, { passive: true });
 
-    // Add subtle parallax to hero elements
+    // Subtle parallax effect
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
       const parallaxElements = document.querySelectorAll('.hero-logo, .device-hero');
