@@ -10,16 +10,8 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #000;
-      color: #fff;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-    }
-
-    section {
-      padding: 120px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     h1, h2 {
@@ -28,55 +20,44 @@
       margin: 0 0 20px;
     }
 
-    h1 {
-      font-size: clamp(48px, 6vw, 96px);
-    }
-
-    h2 {
-      font-size: clamp(32px, 5vw, 64px);
-    }
+    h1 { font-size: clamp(48px, 6vw, 96px); }
+    h2 { font-size: clamp(32px, 5vw, 64px); }
 
     p {
       font-size: clamp(18px, 2vw, 24px);
-      color: #a1a1a6;
       max-width: 800px;
       margin: 0 auto 30px;
+      color: #a1a1a6;
     }
+
+    a { text-decoration: none; }
 
     /* Hero */
     .hero {
+      background: #000;
+      color: #fff;
       text-align: center;
-      padding-top: 160px;
-      padding-bottom: 160px;
+      padding: 160px 20px;
     }
-    .hero img.logo {
-      width: 100px;
-      margin-bottom: 40px;
-    }
-
+    .hero img.logo { width: 100px; margin-bottom: 40px; }
     .cta img {
       height: 60px;
       transition: transform 0.3s ease;
     }
-    .cta img:hover {
-      transform: scale(1.05);
-    }
+    .cta img:hover { transform: scale(1.05); }
 
-    /* Two-column with screenshots */
+    /* White Mid Section */
+    .mid-section {
+      background: #fff;
+      color: #000;
+      padding: 120px 20px;
+    }
+    .mid-section h2, .mid-section p { color: #000; }
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
-    }
-    .two-column p {
-      margin-bottom: 0;
-    }
-    .phone-image {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 24px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
     .phone-wrap {
       display: flex;
@@ -84,16 +65,25 @@
       gap: 30px;
       flex-wrap: wrap;
     }
+    .phone-image {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
 
-    /* Benefits */
+    /* Benefits Section */
+    .benefits-section {
+      background: #000;
+      color: #fff;
+      padding: 120px 20px;
+      text-align: center;
+    }
     .benefits {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
       margin-top: 80px;
-    }
-    .benefit {
-      text-align: center;
     }
     .benefit span {
       font-size: 40px;
@@ -112,37 +102,42 @@
 
     /* Footer */
     footer {
-      text-align: center;
-      padding: 60px 20px;
-      font-size: 14px;
+      background: #111;
       color: #6e6e73;
+      padding: 60px 20px;
+      text-align: center;
       border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
     }
+    .footer-links { margin-bottom: 20px; }
+    .footer-links a {
+      color: #a1a1a6;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover { color: #fff; }
 
     @media (max-width: 900px) {
-      .two-column {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .phone-wrap {
-        justify-content: center;
-      }
+      .two-column { grid-template-columns: 1fr; text-align: center; }
+      .phone-wrap { justify-content: center; }
     }
   </style>
 </head>
 <body>
+
   <!-- Hero -->
   <section class="hero">
     <img src="images/app-logo.png" alt="BLOCKR Logo" class="logo"/>
     <h1>Own your day.</h1>
-    <p>Break free from phone addiction. Build the focus you've been looking for.</p>
+    <p>Break free from phone addiction.<br>Build the focus you've been looking for.</p>
     <div class="cta">
       <a href="#"><img src="images/download-cta.png" alt="Download on the App Store"/></a>
     </div>
   </section>
 
-  <!-- Mid Section with Screenshots -->
-  <section>
+  <!-- White Mid Section -->
+  <section class="mid-section">
     <div class="two-column">
       <div>
         <h2>Reclaim your time.</h2>
@@ -150,14 +145,14 @@
         <p>The average person spends over 7 hours a day on their phone. BLOCKR helps you redirect that time toward what truly matters — your goals, relationships, and personal growth.</p>
       </div>
       <div class="phone-wrap">
-        <img src="images/screenshot-1.png" alt="BLOCKR App Screenshot" class="phone-image"/>
-        <img src="images/screenshot-2.png" alt="BLOCKR App Screenshot" class="phone-image"/>
+        <img src="images/screenshot-1.png" alt="BLOCKR Screenshot 1" class="phone-image"/>
+        <img src="images/screenshot-2.png" alt="BLOCKR Screenshot 2" class="phone-image"/>
       </div>
     </div>
   </section>
 
-  <!-- Benefits -->
-  <section>
+  <!-- Benefits Section -->
+  <section class="benefits-section">
     <h2>Designed for real life.</h2>
     <div class="benefits">
       <div class="benefit">
@@ -175,7 +170,13 @@
 
   <!-- Footer -->
   <footer>
-    © 2024 BLOCKR. All rights reserved.
+    <div class="footer-links">
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
+      <a href="privacy.html" target="_blank">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div>© 2025 BLOCKR. All rights reserved.</div>
   </footer>
+
 </body>
 </html>
