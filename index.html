@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BLOCKR: Quit Phone Addiction</title>
+  <title>BLOCKR</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/app-logo.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/app-logo.png" />
 
   <style>
-    /* Base Reset */
     * { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body {
@@ -41,112 +39,47 @@
       margin-bottom:15px;
     }
     .hero-subtitle {
-      font-size:clamp(22px,4vw,40px);
+      font-size:clamp(22px,4vw,36px);
       font-weight:400;
       color:#aaa;
-      margin-bottom:60px;
+      margin-bottom:50px;
     }
-
-    /* Phones showcase */
-    .device-showcase {
-      display:flex;
-      gap:50px;
-      justify-content:center;
-      align-items:center;
-      margin-bottom:60px;
-    }
-    .phone {
-      width:280px;
-      border-radius:28px;
-      box-shadow:0 20px 60px rgba(0,0,0,.5);
-      transition:transform .5s ease, box-shadow .5s ease;
-    }
-    .phone:hover {
-      transform:translateY(-8px) scale(1.03);
-      box-shadow:0 30px 80px rgba(0,0,0,.7);
-    }
-
-    /* CTA */
-    .cta { margin-top:20px; }
     .cta img { height:65px; transition:transform .3s ease; }
     .cta img:hover { transform:scale(1.05); }
 
     /* Sections */
-    section { padding:120px 20px; max-width:1200px; margin:0 auto; }
-    .two-col {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:80px;
-      align-items:center;
-    }
+    section { padding:100px 20px; max-width:1000px; margin:0 auto; text-align:center; }
     .large-title {
-      font-size:clamp(38px,5vw,68px);
+      font-size:clamp(38px,6vw,72px);
       font-weight:700;
       margin-bottom:20px;
     }
     .body-text {
       font-size:clamp(18px,2.5vw,24px);
       color:#a1a1a6;
+      max-width:800px;
+      margin:0 auto;
     }
 
-    /* Stats */
-    .stats {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:60px;
-      text-align:center;
-      margin-top:80px;
-    }
-    .stat-number {
-      font-size:clamp(44px,6vw,72px);
-      font-weight:700;
-      color:#0a84ff;
-      margin-bottom:12px;
-    }
-    .stat-label { color:#aaa; font-size:18px; }
-
-    /* Benefits grid */
+    /* Benefits */
     .benefits {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-      gap:60px;
-      margin-top:80px;
-    }
-    .benefit {
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:50px;
+      margin-top:70px;
       text-align:left;
     }
     .benefit-icon {
-      font-size:40px;
-      color:#0a84ff;
-      margin-bottom:20px;
+      font-size:34px;
       display:block;
+      margin-bottom:15px;
     }
     .benefit-title {
-      font-size:24px;
+      font-size:22px;
       font-weight:600;
-      margin-bottom:10px;
+      margin-bottom:8px;
     }
     .benefit-text { color:#a1a1a6; font-size:18px; }
-
-    /* Full width section */
-    .full-width {
-      min-height:80vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:radial-gradient(circle at center,#111 0%,#000 100%);
-      padding:60px 20px;
-    }
-    .full-width h2 {
-      font-size:clamp(42px,7vw,80px);
-      font-weight:700;
-      margin-bottom:20px;
-    }
-    .full-width p {
-      font-size:clamp(20px,3.5vw,32px);
-      color:#aaa;
-    }
 
     /* Footer */
     footer {
@@ -155,27 +88,7 @@
       text-align:center;
       border-top:1px solid rgba(255,255,255,.1);
     }
-    .footer-links {
-      display:flex;
-      justify-content:center;
-      gap:30px;
-      flex-wrap:wrap;
-      margin-bottom:20px;
-    }
-    .footer-links a {
-      color:#a1a1a6;
-      text-decoration:none;
-      font-size:16px;
-    }
-    .footer-links a:hover { color:#fff; }
     .copy { color:#666; font-size:13px; }
-
-    /* Responsive */
-    @media(max-width:900px){
-      .two-col { grid-template-columns:1fr; text-align:center; }
-      .device-showcase { flex-direction:column; gap:30px; }
-      .phone { width:220px; }
-    }
   </style>
 </head>
 <body>
@@ -183,96 +96,45 @@
   <!-- Hero -->
   <section class="hero">
     <img src="images/app-logo.png" alt="BLOCKR Logo" class="hero-logo"/>
-    <h1 class="hero-title">Take back your time.</h1>
-    <p class="hero-subtitle">The app that ends endless scrolling.</p>
-
-    <div class="device-showcase">
-      <img src="images/screenshot-1.png" alt="BLOCKR App Screenshot" class="phone"/>
-      <img src="images/screenshot-2.png" alt="BLOCKR Features Screenshot" class="phone"/>
-    </div>
+    <h1 class="hero-title">Own your day.</h1>
+    <p class="hero-subtitle">Break free from phone addiction.<br/>Build the focus you've been looking for.</p>
 
     <div class="cta">
       <a href="#"><img src="images/download-cta.png" alt="Download on the App Store"/></a>
     </div>
   </section>
 
-  <!-- Break Free -->
+  <!-- Reclaim your time -->
   <section>
-    <div class="two-col">
-      <div>
-        <h2 class="large-title">Break free from phone addiction.</h2>
-        <p class="body-text">BLOCKR uses behavioral psychology to help you reclaim control over your digital habits. Block distracting apps, track your progress, and rediscover what matters most.</p>
-      </div>
-      <div>
-        <img src="images/screenshot-1.png" alt="BLOCKR Interface" class="phone"/>
-      </div>
-    </div>
+    <h2 class="large-title">Reclaim your time.</h2>
+    <p class="body-text">Turn hours of scrolling into hours of living.</p>
   </section>
 
-  <!-- Stats -->
+  <!-- Average time -->
   <section>
-    <h2 class="large-title" style="text-align:center;">Proven Results</h2>
-    <p class="body-text" style="text-align:center;">Join thousands who have already transformed their relationship with technology</p>
-    <div class="stats">
-      <div><div class="stat-number">2.5 hrs</div><div class="stat-label">Average time saved daily</div></div>
-      <div><div class="stat-number">95%</div><div class="stat-label">Success rate in first month</div></div>
-      <div><div class="stat-number">50K+</div><div class="stat-label">Lives transformed</div></div>
-      <div><div class="stat-number">4.9★</div><div class="stat-label">App Store rating</div></div>
-    </div>
+    <p class="body-text">The average person spends over 7 hours a day on their phone. BLOCKR helps you redirect that time toward what truly matters — your goals, relationships, and personal growth.</p>
   </section>
 
-  <!-- Smart Protection -->
+  <!-- Designed for real life -->
   <section>
-    <div class="two-col">
-      <div>
-        <img src="images/screenshot-2.png" alt="Smart Protection" class="phone"/>
-      </div>
-      <div>
-        <h2 class="large-title">Unbreakable protection.</h2>
-        <p class="body-text">Advanced algorithms prevent you from disabling blocks during moments of weakness. No bypass methods. No exceptions. Just the focus you need.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Full Width -->
-  <section class="full-width">
-    <div>
-      <h2>Own your day.</h2>
-      <p>Reclaim your time, boost productivity, and live with intention.</p>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section>
-    <h2 class="large-title" style="text-align:center;">Designed for Success</h2>
-    <p class="body-text" style="text-align:center;">Every feature is crafted to help you build lasting, healthy habits</p>
+    <h2 class="large-title">Designed for real life.</h2>
 
     <div class="benefits">
-      <div class="benefit"><span class="benefit-icon">⚡</span><h3 class="benefit-title">Instant Focus Mode</h3><p class="benefit-text">Block distracting apps with one tap. Perfect for work sessions, study time, or family moments that matter.</p></div>
-      <div class="benefit"><span class="benefit-icon">📈</span><h3 class="benefit-title">Progress Tracking</h3><p class="benefit-text">See exactly how much time you're saving. Celebrate milestones and stay motivated on your journey.</p></div>
-      <div class="benefit"><span class="benefit-icon">🎯</span><h3 class="benefit-title">Smart Scheduling</h3><p class="benefit-text">Set custom schedules that adapt to your lifestyle. Automatic blocks during work hours or bedtime.</p></div>
-      <div class="benefit"><span class="benefit-icon">🧠</span><h3 class="benefit-title">Habit Breaking</h3><p class="benefit-text">Interrupt mindless scrolling patterns with gentle reminders and reflection prompts.</p></div>
-      <div class="benefit"><span class="benefit-icon">🔒</span><h3 class="benefit-title">Privacy First</h3><p class="benefit-text">Your data stays on your device. No tracking, no ads, no subscriptions. Complete privacy guaranteed.</p></div>
-      <div class="benefit"><span class="benefit-icon">💎</span><h3 class="benefit-title">Premium Experience</h3><p class="benefit-text">One-time purchase for lifetime access. Clean interface, reliable performance, constant updates.</p></div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section style="text-align:center;">
-    <h2 class="large-title">Ready to break free?</h2>
-    <p class="body-text">Download BLOCKR and take control of your digital life today.</p>
-    <div class="cta" style="margin-top:40px;">
-      <a href="#"><img src="images/download-cta.png" alt="Download on the App Store"/></a>
+      <div>
+        <span class="benefit-icon">🔒</span>
+        <h3 class="benefit-title">Privacy First</h3>
+        <p class="benefit-text">Your data stays on your device. No tracking, no ads, no cloud storage. Complete privacy guaranteed.</p>
+      </div>
+      <div>
+        <span class="benefit-icon">✨</span>
+        <h3 class="benefit-title">Clean Experience</h3>
+        <p class="benefit-text">Beautiful, intuitive interface designed to get out of your way. No clutter, no distractions.</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
-      <a href="privacy.html" target="_blank">Privacy Policy</a>
-      <a href="support.html">Support</a>
-    </div>
     <div class="copy">© 2025 BLOCKR. All rights reserved.</div>
   </footer>
 
