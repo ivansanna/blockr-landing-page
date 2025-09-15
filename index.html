@@ -15,103 +15,42 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #000;
+      color: #fff;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      background: #0a0a0a;
-      color: #ffffff;
       overflow-x: hidden;
     }
 
-    /* Animated gradient background */
-    .gradient-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(-45deg, #0a0a0a, #1a0f1a, #0f1a1a, #1a1a0f);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      z-index: -2;
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Floating particles */
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .particle {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      animation: float 20s infinite linear;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
-    }
-
     h1, h2, h3 {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0;
+      font-weight: 600;
+      letter-spacing: -0.03em;
     }
 
-    h1 { 
-      font-size: clamp(64px, 8vw, 128px); 
-      background: linear-gradient(135deg, #ffffff, #a855f7, #3b82f6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    h1 {
+      font-size: clamp(56px, 8vw, 96px);
       margin-bottom: 24px;
     }
 
-    h2 { 
-      font-size: clamp(40px, 6vw, 80px); 
-      margin-bottom: 32px;
+    h2 {
+      font-size: clamp(40px, 6vw, 72px);
+      margin-bottom: 20px;
     }
 
     h3 {
-      font-size: 24px;
-      margin-bottom: 16px;
+      font-size: 28px;
+      margin-bottom: 12px;
     }
 
     p {
-      font-size: clamp(18px, 2.5vw, 22px);
-      max-width: 600px;
-      margin: 0 auto 32px;
+      font-size: 20px;
+      font-weight: 300;
       color: rgba(255, 255, 255, 0.8);
-      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 700px;
     }
 
     a { text-decoration: none; }
-
-    /* Premium glass morphism container */
-    .glass-container {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 60px 40px;
-      margin: 40px 0;
-    }
 
     /* Hero */
     .hero {
@@ -121,35 +60,20 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 160px 20px;
+      padding: 140px 20px 100px;
       position: relative;
     }
 
     .hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
       pointer-events: none;
     }
 
-    .hero img.logo { 
-      width: 120px; 
-      margin-bottom: 60px;
-      filter: drop-shadow(0 0 30px rgba(168, 85, 247, 0.3));
-      animation: logoFloat 6s ease-in-out infinite;
-    }
-
-    @keyframes logoFloat {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-
     .hero-subtitle {
-      font-size: clamp(24px, 3vw, 32px);
+      font-size: clamp(24px, 4vw, 32px);
       font-weight: 300;
       margin-bottom: 60px;
       color: rgba(255, 255, 255, 0.9);
@@ -162,35 +86,18 @@
     .cta-button {
       display: inline-block;
       padding: 18px 48px;
-      background: linear-gradient(135deg, #a855f7, #3b82f6);
-      color: white;
-      border-radius: 50px;
-      font-weight: 600;
+      background: #fff;
+      color: #000;
+      border-radius: 999px;
+      font-weight: 500;
       font-size: 18px;
-      transition: all 0.4s ease;
-      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .cta-button:hover::before {
-      left: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
     }
 
     .cta-button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(168, 85, 247, 0.4);
+      transform: scale(1.03);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
     }
 
     /* Mid Section */
@@ -211,12 +118,8 @@
       align-items: center;
     }
 
-    .content-column h2 {
-      background: linear-gradient(135deg, #ffffff, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 40px;
+    .content-column p {
+      margin-bottom: 20px;
     }
 
     .phone-wrap {
@@ -224,156 +127,72 @@
       justify-content: center;
       gap: 40px;
       flex-wrap: wrap;
-      perspective: 1000px;
-    }
-
-    .phone-container {
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 0.6s ease;
-    }
-
-    .phone-container:hover {
-      transform: rotateY(10deg) rotateX(5deg);
     }
 
     .phone-image {
       width: 100%;
-      max-width: 280px;
-      border-radius: 32px;
-      box-shadow: 
-        0 30px 80px rgba(0, 0, 0, 0.4),
-        0 0 60px rgba(168, 85, 247, 0.2);
-      transition: all 0.6s ease;
+      max-width: 300px;
+      border-radius: 28px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      transition: transform 0.6s ease;
     }
 
-    .phone-container:hover .phone-image {
-      box-shadow: 
-        0 40px 100px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(168, 85, 247, 0.3);
-    }
-
-    /* Benefits Section */
-    .benefits-section {
-      padding: 160px 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    .benefits-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .benefits-title {
-      background: linear-gradient(135deg, #ffffff, #3b82f6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 80px;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 60px;
-      margin-top: 80px;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .benefit {
-      position: relative;
-      transition: transform 0.4s ease;
-    }
-
-    .benefit:hover {
+    .phone-image:hover {
       transform: translateY(-10px);
     }
 
-    .benefit-icon {
-      font-size: 60px;
-      display: block;
-      margin-bottom: 32px;
-      filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.5));
-    }
-
-    .benefit h3 {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .benefit p {
-      font-size: 18px;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.8;
-    }
-
-    /* Premium features section */
+    /* Features */
     .premium-section {
       padding: 160px 20px;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(20px);
+      background: #111;
+      text-align: center;
     }
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 60px;
       margin-top: 80px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 40px 30px;
+      padding: 40px 20px;
+    }
+
+    .feature-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    /* Benefits */
+    .benefits-section {
+      padding: 160px 20px;
       text-align: center;
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
     }
 
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #a855f7, #3b82f6, #a855f7);
-      opacity: 0;
-      transition: opacity 0.4s ease;
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      margin-top: 80px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .feature-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(168, 85, 247, 0.3);
-    }
-
-    .feature-card:hover::before {
-      opacity: 1;
+    .benefit h3 {
+      font-weight: 500;
     }
 
     /* Footer */
     footer {
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: #000;
       padding: 80px 20px;
       text-align: center;
-      position: relative;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .footer-links {
@@ -381,124 +200,36 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 30px;
     }
 
     .footer-links a {
       color: rgba(255, 255, 255, 0.7);
       font-size: 16px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .footer-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, #a855f7, #3b82f6);
-      transition: width 0.3s ease;
+      transition: color 0.3s ease;
     }
 
     .footer-links a:hover {
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    .footer-links a:hover::after {
-      width: 100%;
+      color: #fff;
     }
 
     .footer-text {
       color: rgba(255, 255, 255, 0.5);
       font-size: 14px;
-      margin-top: 40px;
     }
 
-    /* Responsive Design */
+    /* Responsive */
     @media (max-width: 1024px) {
-      .two-column { 
-        grid-template-columns: 1fr; 
-        text-align: center;
-        gap: 60px;
-      }
-      
-      .phone-wrap { justify-content: center; }
-      
-      .benefits {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
-      }
-      
-      .glass-container {
-        padding: 40px 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero { padding: 120px 20px; }
-      .mid-section, .benefits-section, .premium-section { padding: 100px 20px; }
-      
-      h1 { font-size: clamp(48px, 12vw, 80px); }
-      h2 { font-size: clamp(32px, 8vw, 56px); }
-      
-      .cta-button {
-        padding: 16px 32px;
-        font-size: 16px;
-      }
-      
-      .footer-links {
-        flex-direction: column;
-        gap: 20px;
-      }
-    }
-
-    /* Scroll animations */
-    @media (prefers-reduced-motion: no-preference) {
-      .benefit, .feature-card {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 0.6s ease forwards;
-      }
-      
-      .benefit:nth-child(2) { animation-delay: 0.2s; }
-      .benefit:nth-child(3) { animation-delay: 0.4s; }
-      
-      @keyframes fadeInUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+      .two-column { grid-template-columns: 1fr; text-align: center; gap: 60px; }
     }
   </style>
 </head>
 <body>
-  <!-- Animated Background -->
-  <div class="gradient-bg"></div>
-  
-  <!-- Floating Particles -->
-  <div class="particles">
-    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-    <div class="particle" style="left: 40%; animation-delay: 6s;"></div>
-    <div class="particle" style="left: 50%; animation-delay: 8s;"></div>
-    <div class="particle" style="left: 60%; animation-delay: 10s;"></div>
-    <div class="particle" style="left: 70%; animation-delay: 12s;"></div>
-    <div class="particle" style="left: 80%; animation-delay: 14s;"></div>
-    <div class="particle" style="left: 90%; animation-delay: 16s;"></div>
-  </div>
-
   <!-- Hero -->
   <section class="hero">
-    <img src="images/app-logo.png" alt="BLOCKR Logo" class="logo"/>
     <h1>Own your day.</h1>
-    <div class="hero-subtitle">Break free from phone addiction</div>
-    <p>Transform hours of mindless scrolling into purposeful living. Build the focus you've been searching for with premium tools designed for digital wellness.</p>
+    <div class="hero-subtitle">Break free from phone addiction.</div>
+    <p>Transform hours of scrolling into purposeful living. Build the focus you’ve been searching for with premium tools designed for digital wellness.</p>
     <div class="cta">
       <a href="#" class="cta-button">Download Premium</a>
     </div>
@@ -510,16 +241,12 @@
       <div class="two-column">
         <div class="content-column">
           <h2>Reclaim your time.</h2>
-          <p>Turn endless scrolling into meaningful moments. The average person loses over 7 hours daily to their device.</p>
-          <p>BLOCKR Premium redirects that time toward what truly matters—your goals, relationships, and personal growth. Experience digital freedom like never before.</p>
+          <p>The average person loses over 7 hours daily to their device.</p>
+          <p>BLOCKR Premium redirects that time toward what truly matters—your goals, relationships, and personal growth.</p>
         </div>
         <div class="phone-wrap">
-          <div class="phone-container">
-            <img src="images/screenshot-1.png" alt="BLOCKR Screenshot 1" class="phone-image"/>
-          </div>
-          <div class="phone-container">
-            <img src="images/screenshot-2.png" alt="BLOCKR Screenshot 2" class="phone-image"/>
-          </div>
+          <img src="images/screenshot-1.png" alt="BLOCKR Screenshot 1" class="phone-image"/>
+          <img src="images/screenshot-2.png" alt="BLOCKR Screenshot 2" class="phone-image"/>
         </div>
       </div>
     </div>
@@ -528,22 +255,21 @@
   <!-- Premium Features -->
   <section class="premium-section">
     <div class="container">
-      <h2 class="benefits-title">Premium Experience</h2>
-      <p>Unlock exclusive features designed for the modern digital minimalist</p>
-      
+      <h2>Premium Experience</h2>
+      <p>Unlock exclusive features designed for the modern digital minimalist.</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="benefit-icon">⚡</div>
+          <div class="feature-icon">⚡</div>
           <h3>Smart Blocking</h3>
           <p>AI-powered distraction detection that learns your patterns and blocks interruptions before they happen.</p>
         </div>
         <div class="feature-card">
-          <div class="benefit-icon">📊</div>
+          <div class="feature-icon">📊</div>
           <h3>Deep Analytics</h3>
           <p>Comprehensive insights into your digital habits with personalized recommendations for improvement.</p>
         </div>
         <div class="feature-card">
-          <div class="benefit-icon">🎯</div>
+          <div class="feature-icon">🎯</div>
           <h3>Focus Sessions</h3>
           <p>Immersive productivity modes with ambient soundscapes and progress tracking.</p>
         </div>
@@ -551,20 +277,18 @@
     </div>
   </section>
 
-  <!-- Benefits Section -->
+  <!-- Benefits -->
   <section class="benefits-section">
     <div class="container">
-      <h2 class="benefits-title">Built for excellence.</h2>
+      <h2>Built for excellence.</h2>
       <div class="benefits">
         <div class="benefit">
-          <span class="benefit-icon">🔒</span>
-          <h3>Privacy First</h3>
-          <p>Your data remains exclusively on your device. Zero tracking, no advertisements, no cloud storage. Complete privacy guaranteed with military-grade encryption.</p>
+          <h3>🔒 Privacy First</h3>
+          <p>Your data remains exclusively on your device. Zero tracking, no advertisements, no cloud storage. Complete privacy guaranteed.</p>
         </div>
         <div class="benefit">
-          <span class="benefit-icon">✨</span>
-          <h3>Premium Design</h3>
-          <p>Crafted with obsessive attention to detail. Beautiful, intuitive interface that disappears when you need focus most. No clutter, no compromises.</p>
+          <h3>✨ Premium Design</h3>
+          <p>Crafted with obsessive attention to detail. Beautiful, intuitive, and distraction-free interface that helps you focus.</p>
         </div>
       </div>
     </div>
@@ -578,11 +302,8 @@
         <a href="privacy/" target="_blank">Privacy Policy</a>
         <a href="support.html">Premium Support</a>
       </div>
-      <div class="footer-text">
-        © 2025 BLOCKR Premium. Crafted for digital wellness.
-      </div>
+      <div class="footer-text">© 2025 BLOCKR Premium. Crafted for digital wellness.</div>
     </div>
   </footer>
-
 </body>
 </html>
