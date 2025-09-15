@@ -7,303 +7,175 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/app-logo.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/app-logo.png" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      line-height: 1.6;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
-    h1, h2, h3 {
-      font-weight: 600;
-      letter-spacing: -0.03em;
+    h1, h2 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px;
     }
 
-    h1 {
-      font-size: clamp(56px, 8vw, 96px);
-      margin-bottom: 24px;
-    }
-
-    h2 {
-      font-size: clamp(40px, 6vw, 72px);
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 28px;
-      margin-bottom: 12px;
-    }
+    h1 { font-size: clamp(48px, 6vw, 96px); }
+    h2 { font-size: clamp(32px, 5vw, 64px); }
 
     p {
-      font-size: 20px;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 28px;
-      max-width: 700px;
+      font-size: clamp(18px, 2vw, 24px);
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #a1a1a6;
     }
 
     a { text-decoration: none; }
 
     /* Hero */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: #000;
+      color: #fff;
       text-align: center;
-      padding: 140px 20px 100px;
-      position: relative;
+      padding: 160px 20px;
     }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
-      pointer-events: none;
+    .hero img.logo { width: 100px; margin-bottom: 40px; }
+    .cta img {
+      height: 60px;
+      transition: transform 0.3s ease;
     }
+    .cta img:hover { transform: scale(1.05); }
 
-    .hero-subtitle {
-      font-size: clamp(24px, 4vw, 32px);
-      font-weight: 300;
-      margin-bottom: 60px;
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .cta {
-      margin-top: 60px;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 18px 48px;
+    /* White Mid Section */
+    .mid-section {
       background: #fff;
       color: #000;
-      border-radius: 999px;
-      font-weight: 500;
-      font-size: 18px;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      padding: 120px 20px;
     }
-
-    .cta-button:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
-    }
-
-    /* Mid Section */
-    .mid-section {
-      padding: 160px 20px;
-      position: relative;
-    }
-
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
+    .mid-section h2, .mid-section p { color: #000; }
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 100px;
+      gap: 60px;
       align-items: center;
     }
-
-    .content-column p {
-      margin-bottom: 20px;
-    }
-
     .phone-wrap {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 30px;
       flex-wrap: wrap;
     }
-
     .phone-image {
       width: 100%;
       max-width: 300px;
-      border-radius: 28px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-      transition: transform 0.6s ease;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
     }
 
-    .phone-image:hover {
-      transform: translateY(-10px);
-    }
-
-    /* Features */
-    .premium-section {
-      padding: 160px 20px;
-      background: #111;
-      text-align: center;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 60px;
-      margin-top: 80px;
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .feature-card {
-      padding: 40px 20px;
-    }
-
-    .feature-icon {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    /* Benefits */
+    /* Benefits Section */
     .benefits-section {
-      padding: 160px 20px;
+      background: #000;
+      color: #fff;
+      padding: 120px 20px;
       text-align: center;
     }
-
     .benefits {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
       margin-top: 80px;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
     }
-
+    .benefit span {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 20px;
+    }
     .benefit h3 {
-      font-weight: 500;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .benefit p {
+      font-size: 18px;
+      color: #a1a1a6;
     }
 
     /* Footer */
     footer {
-      background: #000;
-      padding: 80px 20px;
+      background: #111;
+      color: #6e6e73;
+      padding: 60px 20px;
       text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer-links {
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-      color: #fff;
-    }
-
-    .footer-text {
-      color: rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255,255,255,0.1);
       font-size: 14px;
     }
+    .footer-links { margin-bottom: 20px; }
+    .footer-links a {
+      color: #a1a1a6;
+      margin: 0 15px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover { color: #fff; }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .two-column { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+    @media (max-width: 900px) {
+      .two-column { grid-template-columns: 1fr; text-align: center; }
+      .phone-wrap { justify-content: center; }
     }
   </style>
 </head>
 <body>
+
   <!-- Hero -->
   <section class="hero">
+    <img src="images/app-logo.png" alt="BLOCKR Logo" class="logo"/>
     <h1>Own your day.</h1>
-    <div class="hero-subtitle">Break free from phone addiction.</div>
-    <p>Transform hours of scrolling into purposeful living. Build the focus you’ve been searching for with premium tools designed for digital wellness.</p>
+    <p>Break free from phone addiction.<br>Build the focus you've been looking for.</p>
     <div class="cta">
-      <a href="#" class="cta-button">Download Premium</a>
+      <a href="#"><img src="images/download-cta.png" alt="Download on the App Store"/></a>
     </div>
   </section>
 
-  <!-- Mid Section -->
+  <!-- White Mid Section -->
   <section class="mid-section">
-    <div class="container">
-      <div class="two-column">
-        <div class="content-column">
-          <h2>Reclaim your time.</h2>
-          <p>The average person loses over 7 hours daily to their device.</p>
-          <p>BLOCKR Premium redirects that time toward what truly matters—your goals, relationships, and personal growth.</p>
-        </div>
-        <div class="phone-wrap">
-          <img src="images/screenshot-1.png" alt="BLOCKR Screenshot 1" class="phone-image"/>
-          <img src="images/screenshot-2.png" alt="BLOCKR Screenshot 2" class="phone-image"/>
-        </div>
+    <div class="two-column">
+      <div>
+        <h2>Reclaim your time.</h2>
+        <p>Turn hours of scrolling into hours of living.</p>
+        <p>The average person spends over 7 hours a day on their phone. BLOCKR helps you redirect that time toward what truly matters, your goals, relationships, and personal growth.</p>
+      </div>
+      <div class="phone-wrap">
+        <img src="images/screenshot-1.png" alt="BLOCKR Screenshot 1" class="phone-image"/>
+        <img src="images/screenshot-2.png" alt="BLOCKR Screenshot 2" class="phone-image"/>
       </div>
     </div>
   </section>
 
-  <!-- Premium Features -->
-  <section class="premium-section">
-    <div class="container">
-      <h2>Premium Experience</h2>
-      <p>Unlock exclusive features designed for the modern digital minimalist.</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Smart Blocking</h3>
-          <p>AI-powered distraction detection that learns your patterns and blocks interruptions before they happen.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Deep Analytics</h3>
-          <p>Comprehensive insights into your digital habits with personalized recommendations for improvement.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3>Focus Sessions</h3>
-          <p>Immersive productivity modes with ambient soundscapes and progress tracking.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
+  <!-- Benefits Section -->
   <section class="benefits-section">
-    <div class="container">
-      <h2>Built for excellence.</h2>
-      <div class="benefits">
-        <div class="benefit">
-          <h3>🔒 Privacy First</h3>
-          <p>Your data remains exclusively on your device. Zero tracking, no advertisements, no cloud storage. Complete privacy guaranteed.</p>
-        </div>
-        <div class="benefit">
-          <h3>✨ Premium Design</h3>
-          <p>Crafted with obsessive attention to detail. Beautiful, intuitive, and distraction-free interface that helps you focus.</p>
-        </div>
+    <h2>Designed for real life.</h2>
+    <div class="benefits">
+      <div class="benefit">
+        <span>🔒</span>
+        <h3>Privacy First</h3>
+        <p>Your data stays on your device. No tracking, no ads, no cloud storage. Complete privacy guaranteed.</p>
+      </div>
+      <div class="benefit">
+        <span>✨</span>
+        <h3>Clean Experience</h3>
+        <p>Beautiful, intuitive interface designed to get out of your way. No clutter, no distractions.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Service</a>
-        <a href="privacy/" target="_blank">Privacy Policy</a>
-        <a href="support.html">Premium Support</a>
-      </div>
-      <div class="footer-text">© 2025 BLOCKR Premium. Crafted for digital wellness.</div>
+    <div class="footer-links">
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Terms of Use</a>
+      <a href="privacy/" target="_blank">Privacy Policy</a>
+      <a href="support.html">Support</a>
     </div>
   </footer>
+
 </body>
 </html>
